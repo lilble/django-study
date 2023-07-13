@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Matey-map</h1>
+    <table>
+      {% for room in roomlist %}
+      <ul>
+        <li>{{room.name}}</li>
+        <li>{{room.price_per_night}}</li>
+      </ul>
+      {% endfor %}
+    </table>
+  </body>
+</html>
