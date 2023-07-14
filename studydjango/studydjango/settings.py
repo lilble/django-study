@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,6 +31,7 @@ SECRET_KEY = 'django-insecure-rs8+uf-8+s(3ql@f6j_c@3v*bs$#epm0r08_jx9&=k3wcq_4rp
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     '18.118.28.57',
 ]
 
@@ -78,8 +84,14 @@ WSGI_APPLICATION = 'studydjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dwd', # name of DB
+        'USER': 'root',
+        'PASSWORD': 'berrY5Mysql!',
+        'HOST': 'localhost',
+        'PORT': '3306', # regularly 3306
     }
 }
 

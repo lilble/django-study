@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 
 class Room(models.Model):
-    name = models.CharField(max_length=50)
-    price_per_night = models.IntegerField()
-    description = models.TextField()
+    column1= models.CharField(max_length=255)
+    column2 = models.IntegerField()
+  
 
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.
